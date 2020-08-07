@@ -7,13 +7,18 @@ import Filter from './Filter';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
-  const [filterName, setFilterName] = useState('');
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
     getApiData().then((data) => {
       setCharacters(data);
     });
   }, []);
+
+  const handleFilter = (data) => {
+    console.log('esto ocurre:', data);
+    setFilter(data.value);
+  };
 
   const renderCharacterDetail = (props) => {
     const routeCharacterId = props.match.params.characterId;
@@ -22,11 +27,14 @@ const App = () => {
     });
     if (character) {
       return <CharacterDetail name={character.name} image={character.image} status={character.status} />;
+    } else {
+      return <p>Character not found</p>;
     }
   };
+
   const renderFilteredCharacters = () => {
     return characters.filter((character) => {
-      return character.name.includes(filterName);
+      return character.name.includes(filter);
     });
   };
 
@@ -35,8 +43,8 @@ const App = () => {
       <h1>Rick and Morty</h1>
       <Switch>
         <Route exact path="/">
-          <Filter />
-          <CharacterList characters={renderFilteredCharacters} />
+          <Filter filter={filter} handleFilter={handleFilter} />
+          <CharacterList characters={characters} />
         </Route>
         <Route path="/character/:characterId" render={renderCharacterDetail} />
       </Switch>

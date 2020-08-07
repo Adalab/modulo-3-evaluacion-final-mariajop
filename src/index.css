@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+link {
+  text-decoration: none;
+  color: black;
+}
+
+.characters {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
