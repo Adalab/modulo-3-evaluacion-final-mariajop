@@ -3,7 +3,6 @@ import Character from './Character';
 
 const CharacterList = (props) => {
   const htmlCode = props.characters.map((character) => {
-    console.log(character);
     return (
       <Character
         key={character.id}
@@ -11,6 +10,7 @@ const CharacterList = (props) => {
         name={character.name}
         species={character.species}
         status={character.status}
+        id={character.id}
       />
     );
   });
