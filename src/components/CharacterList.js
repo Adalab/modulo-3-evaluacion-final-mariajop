@@ -14,7 +14,11 @@ const CharacterList = (props) => {
       />
     );
   });
-  return <section className="characters">{htmlCode}</section>;
+  return (
+    <div className="character__container">
+      <section className="characters">{htmlCode}</section>
+    </div>
+  );
 };
 
 export default CharacterList;

@@ -1,18 +1,18 @@
 import React from 'react';
 
 const Filter = (props) => {
-  const handleFilter = (ev) => {
+  const handleFilter = (event) => {
     props.handleFilter({
       key: 'filter',
-      value: ev.target.value,
+      value: event.target.value,
     });
   };
   return (
-    <form>
-      <input type="text" id="filter" value={props.filter} onChange={handleFilter}></input>
-      <button type="submit">
-        <i className="fa fa-search">SEARCH</i>
-      </button>
+    <form className="searchbar">
+      <label htmlFor="filter">
+        <button type="submit">SEARCH</button>
+      </label>
+      <input type="text" id="filter" value={props.filter} onChange={handleFilter} />
     </form>
   );
 };

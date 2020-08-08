@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Filter from './Filter';
 import CharacterDetail from './CharacterDetail';
 import CharacterList from './CharacterList';
 import getApiData from '../services/api';
-import Filter from './Filter';
+import Logo from '../data/images/Rick_and_Morty_-_logo_(English).png';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -16,7 +17,6 @@ const App = () => {
   }, []);
 
   const handleFilter = (data) => {
-    console.log('esto ocurre:', data);
     setFilter(data.value);
   };
 
@@ -31,7 +31,6 @@ const App = () => {
       return <p>Character not found</p>;
     }
   };
-
   const renderFilteredCharacters = () => {
     return characters.filter((character) => {
       return character.name.includes(filter);
@@ -40,7 +39,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Rick and Morty</h1>
+      <h1 className="header">
+        <img src={Logo} alt="logo"></img>
+      </h1>
       <Switch>
         <Route exact path="/">
           <Filter filter={filter} handleFilter={handleFilter} />
