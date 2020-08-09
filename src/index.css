@@ -7,7 +7,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(230, 230, 230);
+  color: rgb(78, 78, 78);
   cursor: pointer;
   text-decoration: none;
 }
@@ -40,8 +40,28 @@ a {
   width: 250px;
 }
 
-.card__img {
-  max-width: 250px;
+.card__info,
+.card__name {
+  background-color: rgb(197, 194, 194);
   overflow: hidden;
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__img {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #cccc;
+}
+
+.page {
+  transition: 0.5s all;
 }

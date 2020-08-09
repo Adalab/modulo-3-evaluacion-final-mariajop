@@ -7,17 +7,19 @@ const CharacterDetail = (props) => {
   };
   return (
     <Link to="/">
-      <div className="modal__content" onClick={handleModalContentClick}>
+      <div className="modal" onClick={handleModalContentClick}>
         <header className="modal__header">
-          <h2 className="modal__title">{props.name}</h2>
           <Link to="/">
             <span className="modal__close">CLOSE</span>
           </Link>
         </header>
         <section>
           <img className="card__img" src={props.image} alt={props.name} />
+          <h2 className="modal__title">Name: {props.name}</h2>
           <ul>
             <li>Species: {props.species}</li>
+            <li>Planet of origin: {props.origin} </li>
+            <li>Episodes: {props.episode.length} </li>
             <li>Status: {props.status}</li>
           </ul>
         </section>

@@ -21,32 +21,41 @@ const App = () => {
   };
 
   const renderCharacterDetail = (props) => {
+    console.log(props);
     const routeCharacterId = props.match.params.characterId;
     const character = characters.find((character) => {
       return character.id === parseInt(routeCharacterId);
     });
     if (character) {
-      return <CharacterDetail name={character.name} image={character.image} status={character.status} />;
+      return (
+        <CharacterDetail
+          name={character.name}
+          species={character.species}
+          image={character.image}
+          status={character.status}
+          origin={character.origin.name}
+          episode={character.episode}
+        />
+      );
     } else {
-      return <p>Character not found</p>;
+      return <p className="card__notfound">Character not found :(</p>;
     }
   };
-  const renderFilteredCharacters = () => {
-    return characters.filter((character) => {
-      return character.name.includes(filter);
-    });
-  };
+
+  // const renderFilteredCharacters = () => {
+  //   characters.filter((character) => {
+  //     return character.name.includes(filter);
+  //   });
+  // };
 
   return (
     <div>
       <h1 className="header">
         <img src={Logo} alt="logo"></img>
       </h1>
+      <Filter filter={filter} handleFilter={handleFilter} />
+      <CharacterList characters={characters} />
       <Switch>
-        <Route exact path="/">
-          <Filter filter={filter} handleFilter={handleFilter} />
-          <CharacterList characters={characters} />
-        </Route>
         <Route path="/character/:characterId" render={renderCharacterDetail} />
       </Switch>
     </div>
