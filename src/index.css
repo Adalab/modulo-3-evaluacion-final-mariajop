@@ -1,8 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-image: url(./data/images/background.png);
-  background-size: cover;
+  background: url(./data/images/background.jpg) repeat;
 }
 
 a {
@@ -10,6 +9,12 @@ a {
   color: rgb(78, 78, 78);
   cursor: pointer;
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
 }
 
 .character__container {
@@ -36,6 +41,7 @@ a {
 .searchbar__input {
   width: 400px;
   height: 40px;
+  padding-left: 15px;
   margin-left: 10px;
   border: solid #45c9dd 5px;
   border-radius: 25px;
@@ -51,6 +57,7 @@ a {
   border: solid #45c9dd 5px;
   border-radius: 25px;
   outline: none;
+  padding: 2px 0 0 0;
 }
 
 .characters {
@@ -64,6 +71,7 @@ a {
 
 .card {
   border: solid #45c9dd 10px;
+  border-radius: 8px;
   width: 250px;
 }
 
@@ -103,22 +111,45 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: #cccc;
+  display: flex;
+  margin: auto;
 }
 
 .modal__container {
-  border: 2px solid red;
-  width: 300px;
+  border: 10px solid #c1f762;
+  border-radius: 12px;
+  background-color: #c1f762;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 200px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: auto;
+  margin-left: calc(50vw - 250px);
+  flex-direction: row;
+  align-content: center;
 }
+
 .modal__img {
   max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px 0 0 20px;
+}
+.modal__name {
+  margin: 10px 0 10px 0;
 }
 .modal__content {
   max-width: 200px;
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 }
 
 .modal .page {

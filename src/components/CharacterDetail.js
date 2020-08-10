@@ -9,20 +9,30 @@ const CharacterDetail = (props) => {
     <Link to="/">
       <div className="modal">
         <div className="modal__content" onClick={handleModalClick}>
-          <header className="modal__header">
-            <Link to="/">
-              <span className="modal__close">CLOSE</span>
-            </Link>
-          </header>
+          <header className="modal__header"></header>
           <section className="modal__container">
             <img className="modal__img" src={props.image} alt={props.name} />
-            <h2 className="modal__name">{props.name}</h2>
-            <ul className="modal__info">
-              <li>Species: {props.species}</li>
-              <li>Planet of origin: {props.origin} </li>
-              <li>Episodes: {props.episode.length} </li>
-              <li>Status: {props.status}</li>
-            </ul>
+            <div className="modal__info">
+              <h2 className="modal__name">{props.name}</h2>
+              <ul>
+                <li>
+                  <strong>Species: </strong>
+                  {props.species}
+                </li>
+                <li>
+                  <strong>Planet of origin: </strong>
+                  {props.origin}{' '}
+                </li>
+                <li>
+                  <strong>Episodes: </strong>
+                  {props.episode.length}{' '}
+                </li>
+                <li>
+                  <strong>Status: </strong>
+                  {props.status}
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
       </div>
