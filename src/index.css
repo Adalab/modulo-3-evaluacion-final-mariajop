@@ -105,6 +105,16 @@ a {
   background-color: #cccc;
 }
 
+.modal__container {
+  border: 2px solid red;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal__img {
+  max-width: 100%;
+}
 .modal__content {
   max-width: 200px;
   display: flex;

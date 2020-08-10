@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.40d72a2f.chunk.css",
-    "main.js": "/static/js/main.9fa545d2.chunk.js",
-    "main.js.map": "/static/js/main.9fa545d2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f30f5965.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f30f5965.js.map",
-    "static/js/2.549b0492.chunk.js": "/static/js/2.549b0492.chunk.js",
-    "static/js/2.549b0492.chunk.js.map": "/static/js/2.549b0492.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.50571c62b89d04ca56e3534bac94197f.js": "/precache-manifest.50571c62b89d04ca56e3534bac94197f.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.40d72a2f.chunk.css.map": "/static/css/main.40d72a2f.chunk.css.map",
-    "static/js/2.549b0492.chunk.js.LICENSE.txt": "/static/js/2.549b0492.chunk.js.LICENSE.txt",
-    "static/media/Rick_and_Morty_-_logo_(English).png": "/static/media/Rick_and_Morty_-_logo_(English).75509f2e.png",
-    "static/media/index.css": "/static/media/background.1fa59f84.png"
+    "main.css": "./static/css/main.33c2c5b2.chunk.css",
+    "main.js": "./static/js/main.54f4275f.chunk.js",
+    "main.js.map": "./static/js/main.54f4275f.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.23573c62.js",
+    "runtime-main.js.map": "./static/js/runtime-main.23573c62.js.map",
+    "static/js/2.549b0492.chunk.js": "./static/js/2.549b0492.chunk.js",
+    "static/js/2.549b0492.chunk.js.map": "./static/js/2.549b0492.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.d9950e93e778e32b2fecdf41ec79f764.js": "./precache-manifest.d9950e93e778e32b2fecdf41ec79f764.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.33c2c5b2.chunk.css.map": "./static/css/main.33c2c5b2.chunk.css.map",
+    "static/js/2.549b0492.chunk.js.LICENSE.txt": "./static/js/2.549b0492.chunk.js.LICENSE.txt",
+    "static/media/Rick_and_Morty_-_logo_(English).png": "./static/media/Rick_and_Morty_-_logo_(English).75509f2e.png",
+    "static/media/index.css": "./static/media/background.1fa59f84.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f30f5965.js",
+    "static/js/runtime-main.23573c62.js",
     "static/js/2.549b0492.chunk.js",
-    "static/css/main.40d72a2f.chunk.css",
-    "static/js/main.9fa545d2.chunk.js"
+    "static/css/main.33c2c5b2.chunk.css",
+    "static/js/main.54f4275f.chunk.js"
   ]
 }

@@ -14,9 +14,9 @@ const CharacterDetail = (props) => {
               <span className="modal__close">CLOSE</span>
             </Link>
           </header>
-          <section>
+          <section className="modal__container">
             <img className="modal__img" src={props.image} alt={props.name} />
-            <h2 className="modal__name">Name: {props.name}</h2>
+            <h2 className="modal__name">{props.name}</h2>
             <ul className="modal__info">
               <li>Species: {props.species}</li>
               <li>Planet of origin: {props.origin} </li>
