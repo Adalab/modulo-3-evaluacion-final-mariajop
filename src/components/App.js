@@ -21,7 +21,6 @@ const App = () => {
   };
 
   const renderCharacterDetail = (props) => {
-    console.log(props);
     const routeCharacterId = props.match.params.characterId;
     const character = characters.find((character) => {
       return character.id === parseInt(routeCharacterId);
@@ -42,11 +41,11 @@ const App = () => {
     }
   };
 
-  // const renderFilteredCharacters = () => {
-  //   characters.filter((character) => {
-  //     return character.name.includes(filter);
-  //   });
-  // };
+  const renderFilteredCharacters = () => {
+    return characters.filter((character) => {
+      return character.name.toUpperCase().includes(filter.toUpperCase());
+    });
+  };
 
   return (
     <div>
@@ -54,7 +53,7 @@ const App = () => {
         <img src={Logo} alt="logo"></img>
       </h1>
       <Filter filter={filter} handleFilter={handleFilter} />
-      <CharacterList characters={characters} />
+      <CharacterList characters={renderFilteredCharacters()} />
       <Switch>
         <Route path="/character/:characterId" render={renderCharacterDetail} />
       </Switch>

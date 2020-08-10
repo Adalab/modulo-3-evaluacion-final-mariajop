@@ -7,12 +7,17 @@ const Filter = (props) => {
       value: event.target.value,
     });
   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
-    <form className="searchbar">
+    <form onSubmit={handleSubmit} className="searchbar">
       <label htmlFor="filter">
-        <button type="submit">SEARCH</button>
+        <button className="searchbar__button" type="submit">
+          SEARCH
+        </button>
       </label>
-      <input type="text" id="filter" value={props.filter} onChange={handleFilter} />
+      <input className="searchbar__input" type="text" id="filter" value={props.filter} onChange={handleFilter} />
     </form>
   );
 };
